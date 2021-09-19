@@ -19,7 +19,7 @@ html{
 
 body {
   background-color: white;
-  width: 85%;
+  width: 1200px;
   display: block;
   margin: 30px auto;
 }
@@ -34,17 +34,17 @@ Main Body Copy Styling
   text-align: left;
   text-decoration: underline;
   color: darkred;
-  margin-left: 10%;
-  margin-top: 5%;
+  margin-left: 30px;
+  margin-top: 30px;
 }
 
 .about-body{
   clear: both;
   text-align: left;
   color: black;
-  margin-top: 2%;
+  margin-top: 5px;
   position: relative;
-  margin-left: 10%;
+  margin-left: 30px;
 }
 
 .harrypotter{
@@ -52,13 +52,13 @@ Main Body Copy Styling
   max-height: 400px;
   float: right;
   position: relative;
-  margin-right: 15%;
+  margin-right: 20px;
 }
 
 figcaption.harrypotter {
   color: darkred;
   font-style: italic;
-  font-size: 12px;
+  font-size: .75rem;
   clear: both;
   max-width: 400px;
   max-height: 400px;
@@ -71,40 +71,40 @@ figcaption.harrypotter {
 
 .body-title{
   text-align: left;
-  font-size: 18px;
-  margin-bottom: 1%;
+  font-size: 1.125rem;
+  margin-bottom: 1px;
 }
 
 .daniel-body{
   clear: both;
   text-align: left;
   color: black;
-  margin-top: 2%;
+  margin-top: 2px;
   position: relative;
-  margin-left: 10%;
+  margin-left: 30px;
   }
 
 .danielradcliffe{
   clear: both;
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 100%;
+  height: auto;
   float: right;
   position: relative;
-  margin-right: 15%;
-  margin-top: 3%;
-  margin-bottom: 1%;
+  margin-right: 15px;
+  margin-top: 3px;
+  margin-bottom: 1px;
 }
 
 figcaption.danielradcliffe {
   color: darkred;
   font-style: italic;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 p{
-  font-size: 14px;
+  font-size: .875rem;
   max-width: 500px;
-  margin-bottom: 1%;
+  margin-bottom: 1px;
 }
 
 /* Nav background */
@@ -159,12 +159,14 @@ h1{
 .Hedwig img {
   display: block;
   margin: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .Hedwig figcaption{
     color: white;
     font-style: italic;
-    font-size: 12px;
+    font-size: 0.75rem;
     text-align: center;
 }
 
@@ -176,7 +178,7 @@ Footer Styling
   text-align: center;
   color: white;
   background-color: darkred;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: lighter;
   font-style: italic;
   padding: 15px;
@@ -189,6 +191,57 @@ Media Queries
 
 *=========================*/
 
-@media all and (min-width: 750px) {}
+@media all and (max-width: 750px) {
+  body{
+      width: 500px;
+      margin: 30px auto;
+      
+  }
 
-@media all and (min-width: 1080px) {}
+  .grid-container{
+    display:flex;
+    justify-content: column;
+    flex-wrap: wrap;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  figcaption {
+    display: contents;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .grid-container {
+    display: block;
+  }
+  
+  .Hedwig img{
+    max-width: 100%;
+    height: auto;
+    float: right;
+    position: relative;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+  
+  .Hedwig figcaption{
+    clear: both;
+    max-width: 400px;
+    max-height: 400px;
+    float: right;
+    position: relative;
+    margin-right: 15%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+  }
+}
+
+@media all and (min-width: 1080px) {
+  body{
+    width: 1200px;
+    margin: 30px auto;
+    }
+}
